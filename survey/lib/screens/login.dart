@@ -1,7 +1,9 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../controllers/authentication.dart';
 import '../utils/Constants.dart';
+import 'dashboard.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -34,7 +36,23 @@ class _LoginState extends State<Login> {
         "role": "survey"
       };
       var response = await authentication.loginExe(params);
-      print(response);
+      var res = jsonDecode(response);
+      if (res["result"] == "success") {
+        setState(() {
+          loginError = "";
+        });
+        var userdata = jsonDecode(res["data"]);
+        Constants.prefs = await SharedPreferences.getInstance();
+        Constants.prefs.setBool("loggedIn", true);
+        Constants.prefs.setString("first_name", userdata["first_name"]);
+        Constants.prefs.setString("last_name", userdata["last_name"]);
+        Constants.prefs.setString("mobile_number", userdata["mobile_number"]);
+        Navigator.push(context,MaterialPageRoute(builder:(context)=>Dashboard()));
+      } else {
+        setState(() {
+          loginError = "Please check Mobile Number and Password";
+        });
+      }
     }
   }
 

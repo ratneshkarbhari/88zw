@@ -31,5 +31,8 @@ Future main() async {
         bodyText1: TextStyle(fontSize: 16.0, fontFamily: 'Hind'),
       ),
     ),
+    routes: {
+      "dashboard": (context) => Dashboard()
+    },
   ));
 }
