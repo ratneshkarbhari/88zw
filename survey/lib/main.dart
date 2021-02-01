@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'screens/login.dart';
+import 'screens/surveys.dart';
+import 'screens/profile.dart';
 import 'screens/dashboard.dart';
 import 'utils/Constants.dart';
 
@@ -15,10 +17,8 @@ Future main() async {
       brightness: Brightness.light,
       primaryColor: Colors.purple[800],
       accentColor: Colors.green[600],
-
       // Define the default font family.
       fontFamily: 'Roboto',
-
       // Define the default TextTheme. Use this to specify the default
       // text styling for headlines, titles, bodies of text, and more.
       textTheme: TextTheme(
@@ -33,6 +33,8 @@ Future main() async {
     ),
     routes: {
       "/dashboard": (context) => Dashboard(),
+      "/surveys": (context) => Surveys(),
+      "/profile" : (context) => Profile()
     },
   ));
 }

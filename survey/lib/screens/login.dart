@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../controllers/authentication.dart';
 import '../utils/Constants.dart';
-import 'dashboard.dart';
 
 class Login extends StatefulWidget {
   @override
