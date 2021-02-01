@@ -18,36 +18,53 @@ class _DashboardState extends State<Dashboard> {
         title: Text("Dashboard"),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(16.0),
         child: Container(
           child: ListView(
             children: [
-              SizedBox(height: 15.0,),
-              Text("Welcome "+prefs.getString("first_name"),style: TextStyle(fontSize: 30.0),),
-              Container(
-                height: 500,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context,"/surveys");
-                  },
-                  child: Card(
-                    elevation: 10.0,
-                    child: Text(
-                      "Surveys"
+              SizedBox(
+                height: 15.0,
+              ),
+              Text(
+                "Welcome " + prefs.getString("first_name"),
+                style: TextStyle(fontSize: 30.0),
+              ),
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, "/surveys");
+                },
+                child: Card(
+                  child: Container(
+                    height: 100.0,
+                    width: double.infinity,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Surveys",
+                          style: Theme.of(context).textTheme.headline6,
+                        )
+                      ],
                     ),
                   ),
                 ),
               ),
-              Container(
-                height: 500,
-                child: GestureDetector(
-                  onTap: () {
-                    Navigator.pushNamed(context,"/profile");
-                  },
-                  child: Card(
-                    elevation: 10.0,
-                    child: Text(
-                      "Profile"
+              GestureDetector(
+                onTap: () {
+                  Navigator.pushNamed(context, "/profile");
+                },
+                child: Card(
+                  child: Container(
+                    height: 100.0,
+                    width: double.infinity,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Text(
+                          "Profile",
+                          style: Theme.of(context).textTheme.headline6,
+                        )
+                      ],
                     ),
                   ),
                 ),
