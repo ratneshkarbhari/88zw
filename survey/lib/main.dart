@@ -26,9 +26,9 @@ Future main() async {
         headline2: TextStyle(fontSize: 60.0, fontWeight: FontWeight.bold),
         headline3: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold),
         headline4: TextStyle(fontSize: 40.0, fontWeight: FontWeight.bold),
-        headline5: TextStyle(fontSize: 50.0, fontWeight: FontWeight.bold),
-        headline6: TextStyle(fontSize: 20.0, fontStyle: FontStyle.italic),
-        bodyText1: TextStyle(fontSize: 16.0, fontFamily: 'Hind'),
+        headline5: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
+        headline6: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+        bodyText1: TextStyle(fontSize: 16.0, fontFamily: 'Roboto'),
       ),
     ),
     routes: {

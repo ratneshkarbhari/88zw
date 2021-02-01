@@ -5,4 +5,8 @@ class ApiService {
     var response = await http.post(url, body: params);
     return response.body;
   }
+  fetchGet(url) async {
+    var response = await http.get(url);
+    return response.body;
+  }
 }

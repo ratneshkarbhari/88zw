@@ -21,7 +21,7 @@ class _DrawerClassState extends State<DrawerClass> {
               accountEmail: Text(prefs.getString("mobile_number")),
             ),
             decoration: BoxDecoration(
-              color: Colors.transparent,
+              color: Colors.white,
             ),
           ),
           ListTile(

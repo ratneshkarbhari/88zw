@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:survey/templates/drawerclass.dart';
 import '../utils/Constants.dart';
+import '../templates/bar.dart';
 
 class Dashboard extends StatefulWidget {
   @override
@@ -14,9 +15,7 @@ class _DashboardState extends State<Dashboard> {
   Widget build(BuildContext context) {
     return Scaffold(
       drawer: DrawerClass(),
-      appBar: AppBar(
-        title: Text("Dashboard"),
-      ),
+      appBar: Bar(),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Container(
@@ -35,7 +34,7 @@ class _DashboardState extends State<Dashboard> {
                 },
                 child: Card(
                   child: Container(
-                    height: 100.0,
+                    height: 200.0,
                     width: double.infinity,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -55,7 +54,7 @@ class _DashboardState extends State<Dashboard> {
                 },
                 child: Card(
                   child: Container(
-                    height: 100.0,
+                    height: 200.0,
                     width: double.infinity,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
