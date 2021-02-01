@@ -32,7 +32,7 @@ Future main() async {
       ),
     ),
     routes: {
-      "dashboard": (context) => Dashboard()
+      "/dashboard": (context) => Dashboard(),
     },
   ));
 }

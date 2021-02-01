@@ -47,7 +47,7 @@ class _LoginState extends State<Login> {
         Constants.prefs.setString("first_name", userdata["first_name"]);
         Constants.prefs.setString("last_name", userdata["last_name"]);
         Constants.prefs.setString("mobile_number", userdata["mobile_number"]);
-        Navigator.push(context,MaterialPageRoute(builder:(context)=>Dashboard()));
+        Navigator.pushReplacementNamed(context, "/dashboard");
       } else {
         setState(() {
           loginError = "Please check Mobile Number and Password";
