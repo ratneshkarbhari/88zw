@@ -3,8 +3,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'screens/login.dart';
 import 'screens/surveys.dart';
 import 'screens/profile.dart';
+import 'screens/surveyDetails.dart';
 import 'screens/dashboard.dart';
 import 'utils/Constants.dart';
+import 'screens/AddSurveyEntry.dart';
 
 Future main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -34,7 +36,11 @@ Future main() async {
     routes: {
       "/dashboard": (context) => Dashboard(),
       "/surveys": (context) => Surveys(),
-      "/profile" : (context) => Profile()
+      "/profile": (context) => Profile(),
+      "/surveyDetails": (context) =>
+          SurveyDetails(),
+      "/addSurveyEntry": (context) =>
+          AddSurveyEntry(),
     },
   ));
 }

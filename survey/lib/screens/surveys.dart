@@ -52,17 +52,27 @@ class _DashboardState extends State<Surveys> {
                     ],
                   ),
                 )
-              : Container(
-                child: ListView.builder(
+              : SingleChildScrollView(
+                  child: ListView.builder(
                     shrinkWrap: true,
                     itemBuilder: (context, index) {
                       return ListTile(
                         title: Text(surveys[index]["title"]),
+                        onTap: () {
+                          Navigator.pushNamed(
+                            context,
+                            "/surveyDetails",
+                            arguments: {
+                              "id" : surveys[index]["id"],
+                              "title" : surveys[index]["title"]
+                            }
+                          );
+                        },
                       );
                     },
-                    itemCount: surveys.length,
+                    itemCount: 3,
                   ),
-              ),
+                ),
         ),
       ),
     );
